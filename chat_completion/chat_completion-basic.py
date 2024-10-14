@@ -33,9 +33,9 @@ messages = [
     {"role": "user", "content": user_message}
 ]
 
-# 파라미터2: model
+# 파라미터 model
 model = "gpt-4o"
-# 파라미터3: max_tokens
+# 파라미터 max_tokens
 max_tokens = 1500
 
 response = run_gpt(model, messages, max_tokens,)
