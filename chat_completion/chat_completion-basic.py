@@ -16,6 +16,10 @@ def run_gpt(model:str, messages:list, max_tokens:int=150, temperature:float=0.7)
 
 return response
 
+# 녹음 파일 읽기
+with open(dataset_path + '/meeting_transcript.txt', "r") as f:
+    transcript = f.read()
+
 
 system_message = "너는 유능한 비서야"
 user_message = f"""회의 녹취본을 제공할게. 이 내용을 바탕으로 회의록을 작성해줘. 단, 회의록 작성의 조건은 다음과 같아.
