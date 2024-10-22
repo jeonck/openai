@@ -2,7 +2,7 @@
 
 from openai import OpenAI
 import os
-os.environ["OPENAI_API_KEY"] = "sk-***"
+os.environ["OPENAI_API_KEY"] = "ㅇㅇㅇ"
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -12,9 +12,8 @@ def run_gpt(model:str, messages:list, max_tokens:int=150, temperature:float=0.7)
     messages=messages,
     max_tokens=max_tokens,
     temperature=temperature,
-)
-
-return response
+  )
+  return response
 
 # 녹음 파일 읽기
 with open(dataset_path + '/meeting_transcript.txt', "r") as f:
@@ -38,7 +37,7 @@ messages = [
 ]
 
 # 파라미터 model
-model = "gpt-4o"
+model = "gpt-4o-mini"
 # 파라미터 max_tokens
 max_tokens = 1500
 
